@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-penniesPerText := 2.0
+    averageOpenRate, displayMessage := 
 
-fmt.Printf("The type of penniesPerText is %T/n", penniesPerText)
 
+    fmt.Println(averageOpenRate, displayMessage)
 }
