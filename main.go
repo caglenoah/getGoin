@@ -3,10 +3,13 @@ package main
 import "fmt"
 
 func main() {
-    const name = "Saul Goodman"
-    const openRate = 30.5
+    messageLen := 10
+    maxMessageLen := 20
+    fmt.Println("Trying to send a message of length:", messageLen, "and a max length of:", maxMessageLen)
 
-msg := fmt.Sprintf("Hi %s, your open rate is %.1f percent\n", name, openRate )
-
-    fmt.Print(msg)
+    if messageLen > MaxMessageLen {
+        fmt.Println("Message sent")
+    } else {
+        fmt.Println("Message not sent")
+    }
 }
