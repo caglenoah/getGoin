@@ -3,14 +3,13 @@ package main
 import "fmt"
 
 func main() {
-    fname := "Dalinar"
-    lname := "Kholin"
-    age := 45
-    messageRate := 0.5
-    isSubscribed := false
-    message := "Sometimes hypocrite is nothing more han a man in the process of changing."
+    var insufficientFundMesssage string = "Purchase failed. Insuffficient funds."
+    var purchaseSuccessMessage string = "Purchase succesful."
+    var accountBalance float64 = 100.0
+    var bulkMessageCost float64 = 75.0 
+    var isPremiumUser bool = true
+    var discountRate float64 = 0.10
+    var finalCost float64
 
-    userLog := fmt.Sprintf("Name: %s %s, Age: %d, Rate: %.1f, isSubscribed: %t, Message: %s\n", fname, lname, age, messageRate, isSubscribed, message)
-
-    fmt.Println(userLog)
+    fmt.Println("Account balance:", accountBalance)
 }
