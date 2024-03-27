@@ -1,10 +1,11 @@
 package main
 
-import "fmt" 
+import "fmt"
 
 func main() {
-    accountAge := 2.6
-    accountAgeInt := int64(accountAge)
+    const premiumPlanName = "Premium Plan"
+    premiumPlanName ="Basic Plan"
 
-    fmt.Println("Your account has existed for", accountAgeInt, "years")
+    fmt.Println("plan", premiumPlanName)
+    fmt.Println("plan:", basicPlanName)
 }
