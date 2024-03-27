@@ -3,9 +3,10 @@ package main
 import "fmt"
 
 func main() {
-    const premiumPlanName = "Premium Plan"
-    const basicPlanName = "Basic Plan"
+    const secondsInMinute = 60
+    const minutesInHour = 60
+    const secondsInHour = // ?
 
-    fmt.Println("plan", premiumPlanName)
-    fmt.Println("plan:", basicPlanName)
+    fmt.Println("number of seconds in an hour:", secondsInHour)
+
 }
