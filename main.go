@@ -1,17 +1,13 @@
 package main
-
-import "fmt"
-
-func concat(s1 string, s2 string) string {
-    return s1 + s2
+func getMonthlyPrice(tier string) int {
+    //?
 }
 
-func main() {
-    test("Lane", " happy birthday!")
-    test("Elon,", "hope that tesla thing works out")
-    test("Go", " is fantastic")
-}
 
-func test(s1 string, s2 string) {
-    fmt.Println(concat(s1, s2))
-}
+// Challenge
+// Complete the getMonthlyPrice function. It accepts a tier (string) as input and returns the monthly price for that tier in pennies. Here are the prices in dollars:
+
+//"basic" - $100.00
+//"premium" - $150.00
+//"enterprise" - $500.00
+//Convert the prices from dollars to pennies. If the given tier doesn't match any of the above, return 0 pennies.
