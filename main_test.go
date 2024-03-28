@@ -23,7 +23,7 @@ func Test(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if output := getMontlyPrice(
+		if output := getMonthlyPrice(
 			test.tier,
 		); output != test.expected {
 			t.Errorf(
