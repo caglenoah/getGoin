@@ -1,5 +1,4 @@
 package main
-
 import (
 	"fmt"
 	"testing"
@@ -7,33 +6,46 @@ import (
 
 func Test(t *testing.T) {
 	type testCase struct {
-		tier      string
-		expected  int
+		costPerSend,
+		numLastMonth,
+		numThisMonth,
+		expected int
 	}
 	tests := []testCase{
-		{"basic", 10000},
-		{"premium", 15000},
-		{"enterprise", 50000},
+		{2, 89, 102, 26},
+		{2, 98, 104, 12},
 	}
 	if withSubmit {
 		tests = append(tests, []testCase{
-			{"invalid", 0},
-			{"", 0},
+			{3, 50, 40, -30},
+			{3, 60, 60, 0},
 		}...)
 	}
-
 	for _, test := range tests {
-		if output := getMonthlyPrice(
-			test.tier,
+		if output := monthlyBillIncrease(
+			test.costPerSend,
+			test.numLastMonth,
+			test.numThisMonth,
 		); output != test.expected {
-			t.Errorf(
-				"Test Failed: (%v) -> expected: %v actual: %v",
-				test.tier, test.expected, output)
+			t.Error(
+				"Test Failed: (%v, %v, %v) -> expected: %v actual: %v\n",
+				test.costPerSend,
+				test.numLastMonth,
+				test.numThisMonth,
+				test.expected,
+				output,
+			)
 		} else {
-			fmt.Printf("Test Passed: (%v) -> expected: %v actual: %v\n",
-		test.tier, test.expected, output)
+			fmt.Printf("Test Pased: (%v, %v, %v) -> expected: %v actual: %v\n",
+		test.costPerSend,
+		test.numLastMonth,
+		test.numThisMonth,
+		test.expected,
+		output,
+		)
 		}
 	}
 }
 
-var withSubmit = true
+
+withSubmit = true
